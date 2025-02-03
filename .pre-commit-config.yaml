@@ -1,0 +1,7 @@
+repos:
+  - repo: https://github.com/psf/black  # Repo của black
+    rev: 23.3.0  # Phiên bản của black (có thể kiểm tra phiên bản mới nhất tại https://github.com/psf/black/releases)
+    hooks:
+      - id: black
+        language_version: python3  # Hoặc phiên bản Python bạn đang sử dụng
+  

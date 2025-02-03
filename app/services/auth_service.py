@@ -1,5 +1,6 @@
 from app.models.user import User
-from app import db
+from app.extensions import db
+
 
 def register_user(username, password):
     # Kiểm tra xem username đã tồn tại chưa
@@ -12,6 +13,7 @@ def register_user(username, password):
     db.session.add(new_user)
     db.session.commit()
     return new_user
+
 
 def login_user(username, password):
     user = User.query.filter_by(username=username).first()
