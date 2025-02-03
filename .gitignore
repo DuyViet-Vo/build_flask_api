@@ -1,0 +1,53 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+*.env
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# Flask specific
+instance/
+.pytest_cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite database (nếu dùng SQLite cho cơ sở dữ liệu)
+*.db
+*.sqlite3
+
+# Coverage reports
+.coverage
+.coverage.*
+nosetests.xml
+pytest.xml
+*.coveragerc
+
+# Flask migration folder
+migrations/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Other
+*.bak
+*.swp
