@@ -37,47 +37,43 @@ Chạy ứng dụng bằng lệnh:
 python run.py
 ```
 ## Các file quan trọng
-app/__init__.py
+
+```app/__init__.py```
 Khởi tạo Flask app và các extensions.
-
 Load cấu hình từ config.py.
-
 Đăng ký các blueprint thông qua hàm register_blueprints.
 
-app/extensions.py
+```app/extensions.py```
 Quản lý các extensions như db, migrate, và jwt.
-
 Giúp tránh lỗi circular import bằng cách tách biệt các extensions.
 
-app/register_blueprints.py
+```app/register_blueprints.py```
 Đăng ký tất cả các blueprint với Flask app.
-
 Giúp quản lý các route một cách có tổ chức.
 
-app/models/user.py
+```app/models/user.py```
 Định nghĩa model User cho database.
-
 Bao gồm các trường như id, username, và password.
 
-app/routes/auth.py
+```app/routes/auth.py```
 Chứa các endpoint liên quan đến xác thực như đăng ký và đăng nhập.
-
 Sử dụng các service từ app/services/auth_service.py để xử lý logic.
 
-app/services/auth_service.py
+```app/services/auth_service.py```
 Chứa các hàm xử lý logic nghiệp vụ như đăng ký và đăng nhập.
-
 Tương tác với model User để thao tác với database.
 
-app/config.py
+```app/config.py```
 Load các biến môi trường từ file .env.
-
 Cung cấp cấu hình cho Flask app.
 
-run.py
+```run.py```
 File chính để chạy ứng dụng.
 
-Gọi hàm create_app từ app/__init__.py để khởi tạo và chạy ứng dụng.
+Gọi hàm create_app từ ```app/__init__.py``` để khởi tạo và chạy ứng dụng.
+
 ## Testing
 Để chạy các test case, sử dụng lệnh sau:
-```python -m unittest discover tests```
+```
+python -m unittest discover tests
+```
